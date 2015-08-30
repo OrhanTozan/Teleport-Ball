@@ -1,6 +1,7 @@
 package com.nahrot.teleportball.huds.menuhud;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import com.nahrot.teleportball.Application;
 import com.nahrot.teleportball.Constants;
@@ -21,6 +22,19 @@ public class MenuHud extends Hud
         titleLabel = new TitleLabel();
         playButton = new PlayButton(app);
         helpButton = new HelpButton(app);
-        titleLabel.getLabel().setPosition(Constants.V_WIDTH / 2, Constants.V_HEIGHT / 2);
+        titleLabel.getLabel().setPosition(Constants.V_WIDTH / 2, Constants.V_HEIGHT / 2 + 400, Align.center);
+        playButton.getButton().setPosition(Constants.V_WIDTH / 2, Constants.V_HEIGHT / 2, Align.center);
+        helpButton.getButton().setPosition(Constants.V_WIDTH / 2, Constants.V_HEIGHT / 2 - 200, Align.center);
+
+        actors.add(titleLabel.getLabel());
+        actors.add(playButton.getButton());
+        actors.add(helpButton.getButton());
+        addAllActorsToStage();
+    }
+
+    public void update(float delta)
+    {
+        super.update(delta);
+        if ()
     }
 }

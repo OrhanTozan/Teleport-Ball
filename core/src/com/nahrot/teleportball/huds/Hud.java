@@ -1,5 +1,6 @@
 package com.nahrot.teleportball.huds;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Stage;
@@ -17,10 +18,11 @@ public class Hud
     {
         stage = new Stage(viewport, batch);
         actors = new Array<Actor>();
+        Gdx.input.setInputProcessor(stage);
     }
 
 
-    public void addActorsToStage()
+    public void addAllActorsToStage()
     {
         for (Actor actor : actors)
         {
@@ -28,7 +30,7 @@ public class Hud
         }
     }
 
-    public void removeActorsFromStage()
+    public void removeAllActorsFromStage()
     {
         for (Actor actor : stage.getActors())
         {

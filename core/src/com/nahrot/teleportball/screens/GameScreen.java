@@ -62,7 +62,7 @@ public class GameScreen implements Screen
             restartHud.addAllActorsToStage();
             restartHud.update(delta);
         }
-        else restartHud.removeAllActorsfromStage();
+        else restartHud.removeAllActorsFromStage();
         restartHud.getScore().update();
         restartHud.getHighScore().update();
         if (ball.died() == false)
@@ -80,8 +80,8 @@ public class GameScreen implements Screen
         {
             player.render(app.batch); // DRAW PLAYER
             ball.render(app.batch); // DRAW BALL
+            font.render(app.batch, Score.value.toString(), Constants.V_WIDTH / 2, Constants.V_HEIGHT / 2, true); // DRAW SCORE
         }
-        font.render(app.batch, Score.value.toString(), Constants.V_WIDTH / 2, Constants.V_HEIGHT / 2, true); // DRAW SCORE
         app.batch.end();
         if (ball.died())
             restartHud.render();

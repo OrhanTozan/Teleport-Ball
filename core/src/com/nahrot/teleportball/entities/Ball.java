@@ -103,21 +103,21 @@ public class Ball extends Entity
         {
             if (player.isBottom) // IF PADDLE IS BOTTOM AND BALL IS TOUCHING PADDLE
             {
-                a2.play();
                 position.y = player.getPosition().y + player.sprite.getHeight();
                 velocity.y *= -1;
                 calculateBallAngle(player);
                 player.isBottom = !player.isBottom;
                 Score.value++;
+                a2.play();
             }
             else if (player.isBottom == false) // ELSE IF PADDLE IS TOP AND BALL IS TOUCHING PADDLE
             {
-                a1.play();
                 position.y = player.position.y - sprite.getHeight();
                 velocity.y *= -1;
                 calculateBallAngle(player);
                 player.isBottom = !player.isBottom;
                 Score.value++;
+                a1.play();
             }
         }
     }
