@@ -1,0 +1,26 @@
+
+everything.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+bg
+  rotate: false
+  xy: 1, 33
+  size: 720, 1280
+  orig: 720, 1280
+  offset: 0, 0
+  index: -1
+paddle
+  rotate: false
+  xy: 1, 1
+  size: 120, 30
+  orig: 120, 30
+  offset: 0, 0
+  index: -1
+ball
+  rotate: false
+  xy: 723, 1288
+  size: 25, 25
+  orig: 25, 25
+  offset: 0, 0
+  index: -1
