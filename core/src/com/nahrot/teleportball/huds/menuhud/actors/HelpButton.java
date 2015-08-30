@@ -7,11 +7,13 @@ import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.scenes.scene2d.utils.SpriteDrawable;
 import com.nahrot.teleportball.Application;
 import com.nahrot.teleportball.huds.ImageButtonGroup;
+import com.nahrot.teleportball.huds.menuhud.MenuHud;
 import com.nahrot.teleportball.screens.HelpScreen;
+import com.nahrot.teleportball.screens.MenuScreen;
 
 public class HelpButton extends ImageButtonGroup
 {
-    public HelpButton(final Application app)
+    public HelpButton(final Application app, final MenuHud menuHud)
     {
         drawableUp = new SpriteDrawable(new Sprite(new Texture("images/helpButton/help-up.png")));
         drawableDown = new SpriteDrawable(new Sprite(new Texture("images/helpButton/help-down.png")));
@@ -24,6 +26,7 @@ public class HelpButton extends ImageButtonGroup
             @Override
             public void clicked (InputEvent event, float x, float y)
             {
+                menuHud.removeAllActorsFromStage();
                 app.setScreen(new HelpScreen(app));
             }
         });
