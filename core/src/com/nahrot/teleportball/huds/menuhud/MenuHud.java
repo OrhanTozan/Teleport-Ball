@@ -35,6 +35,5 @@ public class MenuHud extends Hud
     public void update(float delta)
     {
         super.update(delta);
-        if ()
     }
 }
