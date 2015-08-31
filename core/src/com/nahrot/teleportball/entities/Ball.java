@@ -11,7 +11,7 @@ import com.nahrot.teleportball.huds.restarthud.actors.Score;
 
 public class Ball extends Entity
 {
-    private final int SCORE_MULTIPLIER = 30;
+    private final int SCORE_MULTIPLIER = 40;
 
     private Vector2 velocity = new Vector2();
     private Vector2 baseVelocity = new Vector2();
