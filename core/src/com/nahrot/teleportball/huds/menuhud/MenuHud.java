@@ -9,7 +9,6 @@ import com.nahrot.teleportball.huds.Hud;
 import com.nahrot.teleportball.huds.menuhud.actors.HelpButton;
 import com.nahrot.teleportball.huds.menuhud.actors.PlayButton;
 import com.nahrot.teleportball.huds.menuhud.actors.TitleLabel;
-import com.nahrot.teleportball.screens.MenuScreen;
 
 public class MenuHud extends Hud
 {

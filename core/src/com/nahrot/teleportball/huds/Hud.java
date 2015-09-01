@@ -7,7 +7,6 @@ import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.viewport.Viewport;
 
-
 public class Hud
 {
     protected Stage stage;
@@ -20,7 +19,6 @@ public class Hud
         actors = new Array<Actor>();
         Gdx.input.setInputProcessor(stage);
     }
-
 
     public void addAllActorsToStage()
     {
