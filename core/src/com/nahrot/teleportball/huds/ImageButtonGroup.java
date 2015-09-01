@@ -1,10 +1,11 @@
 package com.nahrot.teleportball.huds;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
 import com.badlogic.gdx.scenes.scene2d.utils.SpriteDrawable;
 
-public abstract class ImageButtonGroup
+public class ImageButtonGroup
 {
     protected com.badlogic.gdx.scenes.scene2d.ui.ImageButton button;
     protected SpriteDrawable drawableUp, drawableDown;

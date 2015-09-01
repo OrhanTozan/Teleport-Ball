@@ -1,4 +1,4 @@
-package com.nahrot.teleportball.huds.menuhud.actors;
+package com.nahrot.teleportball.huds.menuhud.actors.overlay;
 
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
