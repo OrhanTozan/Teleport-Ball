@@ -30,7 +30,7 @@ public class MenuHud extends Hud
         titleLabel.getLabel().setPosition(Constants.V_WIDTH / 2, Constants.V_HEIGHT / 2 + 500, Align.center);
         playButton.getButton().setPosition(Constants.V_WIDTH / 2, Constants.V_HEIGHT / 2 + 100, Align.center);
         helpButton.getButton().setPosition(Constants.V_WIDTH / 2, Constants.V_HEIGHT / 2 - 100, Align.center);
-        colorOverlay.getImage().setPosition(Constants.V_WIDTH / 2, 0, Align.bottom);
+        colorOverlay.getImage().setPosition(Constants.V_WIDTH / 2, -150, Align.bottom);
 
         actors.add(titleLabel.getLabel());
         actors.add(playButton.getButton());
