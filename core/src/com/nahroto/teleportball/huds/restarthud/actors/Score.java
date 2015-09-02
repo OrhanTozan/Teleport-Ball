@@ -2,9 +2,9 @@ package com.nahroto.teleportball.huds.restarthud.actors;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
-import com.nahrot.teleportball.Constants;
-import com.nahrot.teleportball.fonts.Font;
-import com.nahrot.teleportball.huds.LabelGroup;
+import com.nahroto.teleportball.Constants;
+import com.nahroto.teleportball.fonts.Font;
+import com.nahroto.teleportball.huds.LabelGroup;
 
 public class Score extends LabelGroup
 {

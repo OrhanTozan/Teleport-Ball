@@ -1,7 +1,7 @@
 package com.nahroto.teleportball.huds;
 
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
-import com.nahrot.teleportball.fonts.Font;
+import com.nahroto.teleportball.fonts.Font;
 
 public abstract class LabelGroup
 {
