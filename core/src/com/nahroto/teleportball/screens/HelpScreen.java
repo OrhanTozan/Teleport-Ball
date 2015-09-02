@@ -12,6 +12,7 @@ import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.scenes.scene2d.utils.SpriteDrawable;
 import com.nahroto.teleportball.Application;
 import com.nahroto.teleportball.Constants;
+import com.nahroto.teleportball.Settings;
 import com.nahroto.teleportball.entities.Player;
 
 public class HelpScreen implements Screen
@@ -33,7 +34,7 @@ public class HelpScreen implements Screen
     {
         app.camera.setToOrtho(false, Constants.V_WIDTH, Constants.V_HEIGHT);
         player = new Player(new Sprite(new Texture("images/paddlandball/paddle.png")), app);
-        bg = new Sprite(new Texture("images/paddlandball/bg.png"));
+        bg = new Sprite(new Texture(Settings.bgPath));
         overlay = new Sprite(new Texture("images/helpScreen/helpscreen.png"));
         overlay.getTexture().setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
 

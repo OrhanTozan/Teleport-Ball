@@ -7,6 +7,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.nahroto.teleportball.Application;
 import com.nahroto.teleportball.Constants;
+import com.nahroto.teleportball.Settings;
 import com.nahroto.teleportball.huds.menuhud.MenuHud;
 
 public class MenuScreen implements Screen
@@ -26,8 +27,8 @@ public class MenuScreen implements Screen
     {
         app.camera.setToOrtho(false, Constants.V_WIDTH, Constants.V_HEIGHT);
         app.camera.update();
-        menuHud = new MenuHud(app.viewport, app.batch, app);
-        bg = new Sprite(new Texture("images/paddlandball/bg.png"));
+        bg = new Sprite(new Texture(Settings.bgPath));
+        menuHud = new MenuHud(app.viewport, app.batch, app, bg);
     }
 
     @Override

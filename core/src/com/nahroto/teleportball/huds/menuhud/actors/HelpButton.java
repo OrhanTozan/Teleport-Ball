@@ -8,6 +8,8 @@ import com.badlogic.gdx.scenes.scene2d.utils.SpriteDrawable;
 import com.nahroto.teleportball.Application;
 import com.nahroto.teleportball.huds.ImageButtonGroup;
 import com.nahroto.teleportball.huds.menuhud.MenuHud;
+import com.nahroto.teleportball.huds.menuhud.actors.overlay.ColorButton;
+import com.nahroto.teleportball.huds.menuhud.actors.overlay.ColorOverlay;
 import com.nahroto.teleportball.screens.HelpScreen;
 
 public class HelpButton extends ImageButtonGroup
@@ -26,6 +28,7 @@ public class HelpButton extends ImageButtonGroup
             public void clicked (InputEvent event, float x, float y)
             {
                 menuHud.removeAllActorsFromStage();
+                ColorOverlay.enabled = false;
                 app.setScreen(new HelpScreen(app));
             }
         });

@@ -9,6 +9,7 @@ import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.nahroto.teleportball.Application;
 import com.nahroto.teleportball.Constants;
+import com.nahroto.teleportball.Settings;
 import com.nahroto.teleportball.fonts.Font;
 import com.nahroto.teleportball.entities.Ball;
 import com.nahroto.teleportball.entities.Player;
@@ -37,7 +38,7 @@ public class GameScreen implements Screen
         app.camera.setToOrtho(false, Constants.V_WIDTH, Constants.V_HEIGHT); // set camera ortho
         app.camera.update();
         initEntities();
-        restartHud = new RestartHud(app.viewport, app.batch, player, ball);
+        restartHud = new RestartHud(app, app.viewport, app.batch, player, ball);
     }
 
     private void initEntities()
@@ -45,7 +46,7 @@ public class GameScreen implements Screen
         atlas = app.assets.get("atlases/paddlandball/everything.pack"); // get texture atlas
         player = new Player(new Sprite(new Texture("images/paddlandball/paddle.png")), app); // init player with paddle texture
         ball = new Ball(new Sprite(new Texture("images/paddlandball/ball.png")), app); // init ball with ball texture
-        bg = new Sprite(new Texture("images/paddlandball/bg.png"));
+        bg = new Sprite(new Texture(Settings.bgPath));
         font = new Font("fonts/district.otf", 100, Color.WHITE, true);
     }
 
