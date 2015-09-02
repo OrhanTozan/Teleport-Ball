@@ -9,6 +9,7 @@ import com.nahroto.teleportball.Application;
 import com.nahroto.teleportball.Constants;
 import com.nahroto.teleportball.Settings;
 import com.nahroto.teleportball.huds.menuhud.MenuHud;
+import com.nahroto.teleportball.huds.menuhud.actors.overlay.ColorOverlay;
 
 public class MenuScreen implements Screen
 {
@@ -70,7 +71,7 @@ public class MenuScreen implements Screen
     @Override
     public void hide()
     {
-
+        ColorOverlay.enabled = false;
     }
 
     @Override
