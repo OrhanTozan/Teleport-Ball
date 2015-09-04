@@ -46,11 +46,7 @@ public class GameScreen implements Screen
         atlas = app.assets.get("atlases/paddlandball/everything.pack"); // get texture atlas
         player = new Player(new Sprite(new Texture("images/paddlandball/paddle.png")), app); // init player with paddle texture
         ball = new Ball(new Sprite(new Texture("images/paddlandball/ball.png")), app); // init ball with ball texture
-        String path;
-        if (!app.prefs.getString("BG_PATH").equals(""))
-            path = app.prefs.getString("BG_PATH");
-        else
-            path = "images/paddlandball/bg-red.png";
+        String path = app.prefs.getString("BG_PATH", "images/paddlandball/bg-red.png");
         bg = new Sprite(new Texture(path));
         font = new Font("fonts/district.otf", 100, Color.WHITE, true);
     }
@@ -101,7 +97,7 @@ public class GameScreen implements Screen
     @Override
     public void pause()
     {
-
+        Gdx.app.exit();
     }
 
     @Override

@@ -27,11 +27,7 @@ public class MenuScreen implements Screen
     {
         app.camera.setToOrtho(false, Constants.V_WIDTH, Constants.V_HEIGHT);
         app.camera.update();
-        String path;
-        if (!app.prefs.getString("BG_PATH").equals(""))
-            path = app.prefs.getString("BG_PATH");
-        else
-            path = "images/paddlandball/bg-red.png";
+        String path = app.prefs.getString("BG_PATH", "images/paddlandball/bg-red.png");
         bg = new Sprite(new Texture(path));
         menuHud = new MenuHud(app.viewport, app.batch, app, bg);
     }

@@ -33,11 +33,7 @@ public class HelpScreen implements Screen
     {
         app.camera.setToOrtho(false, Constants.V_WIDTH, Constants.V_HEIGHT);
         player = new Player(new Sprite(new Texture("images/paddlandball/paddle.png")), app);
-        String path;
-        if (!app.prefs.getString("BG_PATH").equals(""))
-            path = app.prefs.getString("BG_PATH");
-        else
-            path = "images/paddlandball/bg-red.png";
+        String path = app.prefs.getString("BG_PATH", "images/paddlandball/bg-red.png");
         bg = new Sprite(new Texture(path));
         overlay = new Sprite(new Texture("images/helpScreen/helpscreen.png"));
         overlay.getTexture().setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
