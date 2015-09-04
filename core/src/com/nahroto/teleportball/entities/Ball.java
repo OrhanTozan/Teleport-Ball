@@ -19,6 +19,7 @@ public class Ball extends Entity
     private Sound a1 = app.assets.get("sounds/a1.mp3", Sound.class);
     private Sound a2 = app.assets.get("sounds/a2.mp3", Sound.class);
     private Sound rip = app.assets.get("sounds/rip.wav", Sound.class);
+
     public static boolean died;
 
     public Ball(Sprite sprite, final Application app)
@@ -33,13 +34,14 @@ public class Ball extends Entity
 
     public void update(float delta, Player player)
     {
-        updateBallVelocity();
+        updateVelocity();
+        updateMaxVelocity();
         applyVelocityToPosition(delta);
         bounds.setPosition(position);
         handleCollision(player);
     }
 
-    private void updateBallVelocity()
+    private void updateVelocity()
     {
         if (velocity.y > 0) // if velocity.y is positive
         {
@@ -48,6 +50,12 @@ public class Ball extends Entity
         {
             velocity.y = -baseVelocity.y - (Score.value * SCORE_MULTIPLIER);
         }
+    }
+
+    private void updateMaxVelocity()
+    {
+        if (velocity.y > 1000)
+            velocity.y = 1000;
     }
 
     private void applyVelocityToPosition(float delta)
@@ -134,7 +142,7 @@ public class Ball extends Entity
     {
         position.set(Constants.V_WIDTH / 2 - sprite.getWidth() / 2, Constants.V_HEIGHT / 2 - sprite.getHeight() / 2);
         baseVelocity.set(500, 500);
-        velocity.set(500, 500);
+        velocity.set(MathUtils.random(-500, 500), 500);
         Score.value = 0;
     }
 
