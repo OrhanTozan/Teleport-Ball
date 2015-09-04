@@ -2,6 +2,7 @@ package com.nahroto.teleportball.huds.restarthud.actors;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
@@ -13,10 +14,10 @@ import com.nahroto.teleportball.screens.MenuScreen;
 
 public class HomeButton extends ImageButtonGroup
 {
-    public HomeButton(final Application app)
+    public HomeButton(final Application app, final TextureAtlas atlas)
     {
-        drawableUp = new SpriteDrawable(new Sprite(new Texture("images/homeButton/home-up.png")));
-        drawableDown = new SpriteDrawable(new Sprite(new Texture("images/homeButton/home-down.png")));
+        drawableUp = new SpriteDrawable(atlas.createSprite("home-up"));
+        drawableDown = new SpriteDrawable(atlas.createSprite("home-down"));
 
         applyFilter();
 

@@ -2,6 +2,7 @@ package com.nahroto.teleportball.huds.menuhud.actors;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
@@ -12,10 +13,10 @@ import com.nahroto.teleportball.screens.GameScreen;
 
 public class PlayButton extends ImageButtonGroup
 {
-    public PlayButton(final Application app)
+    public PlayButton(final Application app, final TextureAtlas atlas)
     {
-        drawableUp = new SpriteDrawable(new Sprite(new Texture("images/playButton/pb-up.png")));
-        drawableDown = new SpriteDrawable(new Sprite(new Texture("images/playButton/pb-down.png")));
+        drawableUp = new SpriteDrawable(atlas.createSprite("pb-up"));
+        drawableDown = new SpriteDrawable(atlas.createSprite("pb-down"));
         applyFilter();
 
         button = new ImageButton(drawableUp, drawableDown);
@@ -24,7 +25,7 @@ public class PlayButton extends ImageButtonGroup
             @Override
             public void clicked (InputEvent event, float x, float y)
             {
-                app.setScreen(new GameScreen(app));
+                app.setScreen(new GameScreen(app, atlas));
             }
         });
     }

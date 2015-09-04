@@ -2,6 +2,8 @@ package com.nahroto.teleportball.huds.menuhud.actors.overlay;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import static com.badlogic.gdx.scenes.scene2d.actions.Actions.*;
 
@@ -22,18 +24,18 @@ public class ColorOverlay
     private ColorButton redButton, orangeButton, blueButton, greenButton;
     private Array<ColorButton> colorButtons;
 
-    public ColorOverlay(Sprite bg, Sprite redBG, Sprite orangeBG, Sprite blueBG, Sprite greenBg, final Application app)
+    public ColorOverlay(Sprite bg, Sprite redBG, Sprite orangeBG, Sprite blueBG, Sprite greenBg, final Application app, final TextureAtlas atlas)
     {
-        Texture texture = new Texture("images/colors/overlay.png");
-        texture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
-        image = new Image(texture);
+        Sprite sprite = new Sprite(app.assets.get("images/colors/overlay.png", Texture.class));
+        sprite.getTexture().setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
+        image = new Image(sprite);
 
         colorButtons = new Array<ColorButton>();
 
-        redButton = new ColorButton(new Sprite(new Texture("images/colors/red-up.png")), new Sprite(new Texture("images/colors/red-down.png")));
-        orangeButton = new ColorButton(new Sprite(new Texture("images/colors/orange-up.png")), new Sprite(new Texture("images/colors/orange-down.png")));
-        blueButton = new ColorButton(new Sprite(new Texture("images/colors/blue-up.png")), new Sprite(new Texture("images/colors/blue-down.png")));
-        greenButton = new ColorButton(new Sprite(new Texture("images/colors/green-up.png")), new Sprite(new Texture("images/colors/green-down.png")));
+        redButton = new ColorButton(atlas.createSprite("red-up"), atlas.createSprite("red-down"));
+        orangeButton = new ColorButton(atlas.createSprite("orange-up"), atlas.createSprite("orange-down"));
+        blueButton = new ColorButton(atlas.createSprite("blue-up"), atlas.createSprite("blue-down"));
+        greenButton = new ColorButton(atlas.createSprite("green-up"), atlas.createSprite("green-down"));
 
         redButton.whenClicked(bg, redBG, "images/paddlandball/bg-red.png", app);
         orangeButton.whenClicked(bg, orangeBG, "images/paddlandball/bg-orange.png", app);

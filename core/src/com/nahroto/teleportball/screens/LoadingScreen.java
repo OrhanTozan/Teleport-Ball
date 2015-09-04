@@ -2,6 +2,8 @@ package com.nahroto.teleportball.screens;
 
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.audio.Sound;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.nahroto.teleportball.Application;
 import com.nahroto.teleportball.Constants;
@@ -25,7 +27,15 @@ public class LoadingScreen implements Screen
 
     private void loadAssets()
     {
-        app.assets.load("atlases/paddlandball/everything.pack", TextureAtlas.class);
+        app.assets.load("atlases/everything1.pack", TextureAtlas.class);
+        app.assets.load("images/paddlandball/bg-red.png", Texture.class);
+        app.assets.load("images/paddlandball/bg-orange.png", Texture.class);
+        app.assets.load("images/paddlandball/bg-blue.png", Texture.class);
+        app.assets.load("images/paddlandball/bg-green.png", Texture.class);
+        app.assets.load("images/helpScreen/helpscreen.png", Texture.class);
+        app.assets.load("images/colors/overlay.png", Texture.class);
+        app.assets.load("images/backButton/back-up.png", Texture.class);
+        app.assets.load("images/backButton/back-down.png", Texture.class);
         app.assets.load("sounds/kick.wav", Sound.class);
         app.assets.load("sounds/a1.mp3", Sound.class);
         app.assets.load("sounds/a2.mp3", Sound.class);

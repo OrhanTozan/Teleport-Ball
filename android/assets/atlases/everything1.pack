@@ -1,0 +1,152 @@
+
+everything1.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+overlay
+  rotate: false
+  xy: 1, 765
+  size: 480, 250
+  orig: 480, 250
+  offset: 0, 0
+  index: -1
+ball
+  rotate: false
+  xy: 483, 990
+  size: 25, 25
+  orig: 25, 25
+  offset: 0, 0
+  index: -1
+help-down
+  rotate: false
+  xy: 1, 613
+  size: 250, 150
+  orig: 250, 150
+  offset: 0, 0
+  index: -1
+help-up
+  rotate: false
+  xy: 253, 613
+  size: 250, 150
+  orig: 250, 150
+  offset: 0, 0
+  index: -1
+pb-down
+  rotate: false
+  xy: 1, 461
+  size: 250, 150
+  orig: 250, 150
+  offset: 0, 0
+  index: -1
+pb-up
+  rotate: false
+  xy: 253, 461
+  size: 250, 150
+  orig: 250, 150
+  offset: 0, 0
+  index: -1
+rb-down
+  rotate: false
+  xy: 1, 309
+  size: 250, 150
+  orig: 250, 150
+  offset: 0, 0
+  index: -1
+rb-normal
+  rotate: false
+  xy: 253, 309
+  size: 250, 150
+  orig: 250, 150
+  offset: 0, 0
+  index: -1
+blue-down
+  rotate: false
+  xy: 1, 207
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+blue-up
+  rotate: false
+  xy: 1, 105
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+green-down
+  rotate: false
+  xy: 1, 3
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+green-up
+  rotate: false
+  xy: 103, 207
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+orange-down
+  rotate: false
+  xy: 103, 105
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+orange-up
+  rotate: false
+  xy: 103, 3
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+back-down
+  rotate: false
+  xy: 205, 217
+  size: 150, 90
+  orig: 150, 90
+  offset: 0, 0
+  index: -1
+back-up
+  rotate: false
+  xy: 357, 217
+  size: 150, 90
+  orig: 150, 90
+  offset: 0, 0
+  index: -1
+red-down
+  rotate: false
+  xy: 205, 115
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+red-up
+  rotate: false
+  xy: 205, 13
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+home-down
+  rotate: false
+  xy: 307, 125
+  size: 150, 90
+  orig: 150, 90
+  offset: 0, 0
+  index: -1
+home-up
+  rotate: false
+  xy: 307, 33
+  size: 150, 90
+  orig: 150, 90
+  offset: 0, 0
+  index: -1
+paddle
+  rotate: false
+  xy: 307, 1
+  size: 120, 30
+  orig: 120, 30
+  offset: 0, 0
+  index: -1

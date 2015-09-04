@@ -20,7 +20,7 @@ public class ColorButton extends ImageButtonGroup
         button = new ImageButton(drawableDown, drawableUp);
     }
 
-    public void whenClicked(final Sprite bg, final Sprite newBg, final String newBGPath, final Application app)
+    public void whenClicked(final Sprite bg, final Sprite newBG, final String newBGPath, final Application app)
     {
         button.addListener(new ClickListener()
         {
@@ -29,7 +29,7 @@ public class ColorButton extends ImageButtonGroup
             {
                 app.prefs.putString("BG_PATH", newBGPath);
                 app.prefs.flush();
-                bg.setTexture(newBg.getTexture());
+                bg.setTexture(newBG.getTexture());
             }
         });
     }

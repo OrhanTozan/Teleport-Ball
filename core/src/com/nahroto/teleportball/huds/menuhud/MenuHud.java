@@ -3,6 +3,7 @@ package com.nahroto.teleportball.huds.menuhud;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import com.nahroto.teleportball.Application;
@@ -22,18 +23,18 @@ public class MenuHud extends Hud
     private ColorOverlay colorOverlay;
     private Sprite redBG, orangeBG, blueBG, greenBG;
 
-    public MenuHud(Viewport viewport, SpriteBatch batch, final Application app, Sprite bg)
+    public MenuHud(Viewport viewport, SpriteBatch batch, final Application app, Sprite bg, final TextureAtlas atlas)
     {
         super(viewport, batch);
-        redBG = new Sprite(new Texture("images/paddlandball/bg-red.png"));
-        orangeBG = new Sprite(new Texture("images/paddlandball/bg-orange.png"));
-        blueBG = new Sprite(new Texture("images/paddlandball/bg-blue.png"));
-        greenBG = new Sprite(new Texture("images/paddlandball/bg-green.png"));
+        redBG = new Sprite(app.assets.get("images/paddlandball/bg-red.png", Texture.class));
+        orangeBG = new Sprite(app.assets.get("images/paddlandball/bg-orange.png", Texture.class));
+        blueBG = new Sprite(app.assets.get("images/paddlandball/bg-blue.png", Texture.class));
+        greenBG = new Sprite(app.assets.get("images/paddlandball/bg-green.png", Texture.class));
 
-        colorOverlay = new ColorOverlay(bg, redBG, orangeBG, blueBG, greenBG, app);
+        colorOverlay = new ColorOverlay(bg, redBG, orangeBG, blueBG, greenBG, app, atlas);
         titleLabel = new TitleLabel();
-        playButton = new PlayButton(app);
-        helpButton = new HelpButton(app, this);
+        playButton = new PlayButton(app, atlas);
+        helpButton = new HelpButton(app, this, atlas);
 
         titleLabel.getLabel().setPosition(Constants.V_WIDTH / 2, Constants.V_HEIGHT / 2 + 500, Align.center);
         playButton.getButton().setPosition(Constants.V_WIDTH / 2, Constants.V_HEIGHT / 2 + 100, Align.center);

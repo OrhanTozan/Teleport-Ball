@@ -5,6 +5,7 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
@@ -14,6 +15,8 @@ import com.nahroto.teleportball.Application;
 import com.nahroto.teleportball.Constants;
 import com.nahroto.teleportball.entities.Player;
 
+import javax.xml.soap.Text;
+
 public class HelpScreen implements Screen
 {
     private final Application app;
@@ -22,24 +25,27 @@ public class HelpScreen implements Screen
     private ImageButton backButton;
     private SpriteDrawable bUp, bDown;
     private Stage stage;
+    private TextureAtlas atlas;
 
-    public HelpScreen(final Application app)
+    public HelpScreen(final Application app, final TextureAtlas atlas)
     {
         this.app = app;
+        this.atlas = atlas;
     }
 
     @Override
     public void show()
     {
         app.camera.setToOrtho(false, Constants.V_WIDTH, Constants.V_HEIGHT);
-        player = new Player(new Sprite(new Texture("images/paddlandball/paddle.png")), app);
+        player = new Player(atlas.createSprite("paddle"), app);
         String path = app.prefs.getString("BG_PATH", "images/paddlandball/bg-red.png");
-        bg = new Sprite(new Texture(path));
-        overlay = new Sprite(new Texture("images/helpScreen/helpscreen.png"));
+        bg = new Sprite(app.assets.get(path, Texture.class));
+
+        overlay = new Sprite(app.assets.get("images/helpScreen/helpscreen.png", Texture.class));
         overlay.getTexture().setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
 
-        bUp = new SpriteDrawable(new Sprite(new Texture("images/backButton/back-up.png")));
-        bDown = new SpriteDrawable(new Sprite(new Texture("images/backButton/back-down.png")));
+        bUp = new SpriteDrawable(new Sprite(app.assets.get("images/backButton/back-up.png", Texture.class)));
+        bDown = new SpriteDrawable(new Sprite(app.assets.get("images/backButton/back-down.png", Texture.class)));
 
         bUp.getSprite().getTexture().setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
         bDown.getSprite().getTexture().setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);

@@ -1,6 +1,7 @@
 package com.nahroto.teleportball.huds.restarthud;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
 import com.badlogic.gdx.utils.Align;
@@ -25,14 +26,14 @@ public class RestartHud extends Hud
     private Score score;
     private HighScore highScore;
 
-    public RestartHud(final Application app, Viewport viewport, SpriteBatch batch, final Player player, final Ball ball)
+    public RestartHud(final Application app, Viewport viewport, SpriteBatch batch, final Player player, final Ball ball, final TextureAtlas atlas)
     {
         super(viewport, batch);
         gameOverLabel = new GameOverLabel();
-        restartButton = new RestartButton(player, ball);
+        restartButton = new RestartButton(player, ball, atlas);
         score = new Score();
         highScore = new HighScore(app);
-        homeButton = new HomeButton(app);
+        homeButton = new HomeButton(app, atlas);
 
         gameOverLabel.getLabel().setPosition(Constants.V_WIDTH / 2, Constants.V_HEIGHT / 2 + 350, Align.center);
         restartButton.getButton().setPosition(Constants.V_WIDTH / 2, Constants.V_HEIGHT / 2 + 100, Align.center);
