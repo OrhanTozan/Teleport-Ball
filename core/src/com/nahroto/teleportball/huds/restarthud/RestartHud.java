@@ -31,7 +31,7 @@ public class RestartHud extends Hud
         gameOverLabel = new GameOverLabel();
         restartButton = new RestartButton(player, ball);
         score = new Score();
-        highScore = new HighScore();
+        highScore = new HighScore(app);
         homeButton = new HomeButton(app);
 
         gameOverLabel.getLabel().setPosition(Constants.V_WIDTH / 2, Constants.V_HEIGHT / 2 + 350, Align.center);

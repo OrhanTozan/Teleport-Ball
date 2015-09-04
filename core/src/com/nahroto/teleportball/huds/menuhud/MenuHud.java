@@ -7,7 +7,6 @@ import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import com.nahroto.teleportball.Application;
 import com.nahroto.teleportball.Constants;
-import com.nahroto.teleportball.Settings;
 import com.nahroto.teleportball.huds.Hud;
 import com.nahroto.teleportball.huds.menuhud.actors.HelpButton;
 import com.nahroto.teleportball.huds.menuhud.actors.PlayButton;
@@ -31,7 +30,7 @@ public class MenuHud extends Hud
         blueBG = new Sprite(new Texture("images/paddlandball/bg-blue.png"));
         greenBG = new Sprite(new Texture("images/paddlandball/bg-green.png"));
 
-        colorOverlay = new ColorOverlay(bg, redBG, orangeBG, blueBG, greenBG);
+        colorOverlay = new ColorOverlay(bg, redBG, orangeBG, blueBG, greenBG, app);
         titleLabel = new TitleLabel();
         playButton = new PlayButton(app);
         helpButton = new HelpButton(app, this);

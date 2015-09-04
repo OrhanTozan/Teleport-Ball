@@ -1,6 +1,7 @@
 package com.nahroto.teleportball.screens;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Preferences;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
@@ -9,7 +10,6 @@ import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.nahroto.teleportball.Application;
 import com.nahroto.teleportball.Constants;
-import com.nahroto.teleportball.Settings;
 import com.nahroto.teleportball.fonts.Font;
 import com.nahroto.teleportball.entities.Ball;
 import com.nahroto.teleportball.entities.Player;
@@ -46,7 +46,12 @@ public class GameScreen implements Screen
         atlas = app.assets.get("atlases/paddlandball/everything.pack"); // get texture atlas
         player = new Player(new Sprite(new Texture("images/paddlandball/paddle.png")), app); // init player with paddle texture
         ball = new Ball(new Sprite(new Texture("images/paddlandball/ball.png")), app); // init ball with ball texture
-        bg = new Sprite(new Texture(Settings.bgPath));
+        String path;
+        if (!app.prefs.getString("BG_PATH").equals(""))
+            path = app.prefs.getString("BG_PATH");
+        else
+            path = "images/paddlandball/bg-red.png";
+        bg = new Sprite(new Texture(path));
         font = new Font("fonts/district.otf", 100, Color.WHITE, true);
     }
 
@@ -64,7 +69,7 @@ public class GameScreen implements Screen
         }
         else restartHud.removeAllActorsFromStage();
         restartHud.getScore().update();
-        restartHud.getHighScore().update();
+        restartHud.getHighScore().update(app);
         if (ball.died() == false)
         {
             player.update(delta, app); // UPDATE PLAYER

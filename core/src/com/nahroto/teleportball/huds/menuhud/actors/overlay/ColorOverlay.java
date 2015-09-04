@@ -9,6 +9,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.utils.Array;
+import com.nahroto.teleportball.Application;
 import com.nahroto.teleportball.Constants;
 
 import javafx.scene.layout.Background;
@@ -21,7 +22,7 @@ public class ColorOverlay
     private ColorButton redButton, orangeButton, blueButton, greenButton;
     private Array<ColorButton> colorButtons;
 
-    public ColorOverlay(Sprite bg, Sprite redBG, Sprite orangeBG, Sprite blueBG, Sprite greenBg)
+    public ColorOverlay(Sprite bg, Sprite redBG, Sprite orangeBG, Sprite blueBG, Sprite greenBg, final Application app)
     {
         Texture texture = new Texture("images/colors/overlay.png");
         texture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
@@ -34,10 +35,10 @@ public class ColorOverlay
         blueButton = new ColorButton(new Sprite(new Texture("images/colors/blue-up.png")), new Sprite(new Texture("images/colors/blue-down.png")));
         greenButton = new ColorButton(new Sprite(new Texture("images/colors/green-up.png")), new Sprite(new Texture("images/colors/green-down.png")));
 
-        redButton.whenClicked(bg, redBG, "images/paddlandball/bg-red.png");
-        orangeButton.whenClicked(bg, orangeBG, "images/paddlandball/bg-orange.png");
-        blueButton.whenClicked(bg, blueBG, "images/paddlandball/bg-blue.png");
-        greenButton.whenClicked(bg, greenBg, "images/paddlandball/bg-green.png");
+        redButton.whenClicked(bg, redBG, "images/paddlandball/bg-red.png", app);
+        orangeButton.whenClicked(bg, orangeBG, "images/paddlandball/bg-orange.png", app);
+        blueButton.whenClicked(bg, blueBG, "images/paddlandball/bg-blue.png", app);
+        greenButton.whenClicked(bg, greenBg, "images/paddlandball/bg-green.png", app);
 
         colorButtons.add(redButton);
         colorButtons.add(orangeButton);

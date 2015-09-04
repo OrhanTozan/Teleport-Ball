@@ -12,6 +12,7 @@ import com.nahroto.teleportball.huds.restarthud.actors.Score;
 public class Ball extends Entity
 {
     private final int SCORE_MULTIPLIER = 40;
+    private final int MAX_VELOCITY = 1300;
 
     private Vector2 velocity = new Vector2();
     private Vector2 baseVelocity = new Vector2();
@@ -36,6 +37,7 @@ public class Ball extends Entity
     {
         updateVelocity();
         updateMaxVelocity();
+        System.out.println((int)velocity.y);
         applyVelocityToPosition(delta);
         bounds.setPosition(position);
         handleCollision(player);
@@ -54,8 +56,10 @@ public class Ball extends Entity
 
     private void updateMaxVelocity()
     {
-        if (velocity.y > 1000)
-            velocity.y = 1000;
+        if (velocity.y > MAX_VELOCITY)
+            velocity.y = MAX_VELOCITY;
+        else if (velocity.y < -MAX_VELOCITY)
+            velocity.y = -MAX_VELOCITY;
     }
 
     private void applyVelocityToPosition(float delta)
