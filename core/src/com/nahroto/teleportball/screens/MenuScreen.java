@@ -75,11 +75,11 @@ public class MenuScreen implements Screen
     public void hide()
     {
         ColorOverlay.enabled = false;
+        dispose();
     }
 
     @Override
     public void dispose()
     {
-
     }
 }

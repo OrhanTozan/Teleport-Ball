@@ -93,4 +93,12 @@ public class ColorOverlay
         blueButton.getButton().setPosition(image.getX() + 245, image.getY() + 25);
         greenButton.getButton().setPosition(image.getX() + 355, image.getY() + 25);
     }
+
+    public void dispose()
+    {
+        redButton.dispose();
+        orangeButton.dispose();
+        blueButton.dispose();
+        greenButton.dispose();
+    }
 }

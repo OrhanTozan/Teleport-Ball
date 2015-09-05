@@ -61,4 +61,9 @@ public class MenuHud extends Hud
         super.update(delta);
         colorOverlay.update();
     }
+
+    public void dispose()
+    {
+
+    }
 }

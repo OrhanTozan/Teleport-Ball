@@ -34,4 +34,9 @@ public abstract class LabelGroup
     {
         return font.getHeight(text);
     }
+
+    public void dispose()
+    {
+        font.dispose();
+    }
 }

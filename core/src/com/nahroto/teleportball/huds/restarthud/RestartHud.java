@@ -59,4 +59,13 @@ public class RestartHud extends Hud
     {
         return highScore;
     }
+
+    public void dispose()
+    {
+        gameOverLabel.dispose();
+        restartButton.dispose();
+        homeButton.dispose();
+        score.dispose();
+        highScore.dispose();
+    }
 }
