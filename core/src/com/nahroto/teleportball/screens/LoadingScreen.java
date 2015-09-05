@@ -9,8 +9,10 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
+import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.ProgressBar;
+import com.badlogic.gdx.scenes.scene2d.utils.SpriteDrawable;
 import com.nahroto.teleportball.Application;
 import com.nahroto.teleportball.Constants;
 import com.nahroto.teleportball.fonts.Font;
@@ -21,6 +23,8 @@ public class LoadingScreen implements Screen
     private final Application app;
     private ShapeRenderer sRenderer;
     private Font font;
+    private Sprite bg;
+    private float progress;
 
     public LoadingScreen(final Application app)
     {
@@ -34,8 +38,10 @@ public class LoadingScreen implements Screen
         app.camera.update();
 
         sRenderer = new ShapeRenderer();
-        font = new Font("fonts/district.otf", 60, Color.WHITE, true);
-
+        font = new Font("fonts/district.otf", 90, Color.WHITE, true);
+        String path = app.prefs.getString("BG_PATH", "images/paddlandball/bg-red.png");
+        bg = new Sprite(new Texture(path));
+        progress = 0f;
         loadAssets();
     }
 
@@ -62,20 +68,26 @@ public class LoadingScreen implements Screen
         Gdx.gl.glClearColor(0, 0, 0, 1f);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
-        if (app.assets.update())
+        progress = MathUtils.lerp(progress, app.assets.getProgress(), 0.1f);
+        if (app.assets.update() && progress >= app.assets.getProgress() - 0.001f)
         {
             app.setScreen(new MenuScreen(app));
         }
-
-        sRenderer.setProjectionMatrix(app.camera.combined);
-        sRenderer.begin(ShapeRenderer.ShapeType.Filled);
-        sRenderer.setColor(Color.WHITE);
-        sRenderer.rect(Constants.V_WIDTH / 2 - 150, Constants.V_HEIGHT / 2 - 25, app.assets.getProgress() * 300, 50);
-        sRenderer.end();
         app.batch.setProjectionMatrix(app.camera.combined);
         app.batch.begin();
-        font.render(app.batch, "Loading...", Constants.V_WIDTH / 2, Constants.V_HEIGHT / 2 - 400, true);
+        app.batch.draw(bg, 0, 0);
+        font.render(app.batch, "Loading", Constants.V_WIDTH / 2, Constants.V_HEIGHT / 2 + 100, true);
         app.batch.end();
+        sRenderer.setProjectionMatrix(app.camera.combined);
+        sRenderer.begin(ShapeRenderer.ShapeType.Line);
+        sRenderer.setAutoShapeType(true);
+        sRenderer.setColor(Color.WHITE);
+        sRenderer.rect(Constants.V_WIDTH / 2 - 250, Constants.V_HEIGHT / 2 - 25, 500, 50);
+
+        sRenderer.set(ShapeRenderer.ShapeType.Filled);
+        sRenderer.setColor(Color.WHITE);
+        sRenderer.rect(Constants.V_WIDTH / 2 - 250, Constants.V_HEIGHT / 2 - 25, progress * 500, 50);
+        sRenderer.end();
     }
 
     @Override
@@ -105,5 +117,6 @@ public class LoadingScreen implements Screen
     @Override
     public void dispose()
     {
+
     }
 }
