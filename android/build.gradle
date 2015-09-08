@@ -16,6 +16,9 @@ android {
     }
 }
 
+dependencies {
+    compile 'com.google.android.gms:play-services:7.8.0'
+}
 
 // called every time gradle gets executed, takes the native dependencies of
 // the natives configuration, and extracts them to the proper libs/ folders

@@ -1,0 +1,1059 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<title>ChartboostActivity</title>
+<link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="ChartboostActivity";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../com/chartboost/sdk/Chartboost.CBFramework.html" title="enum in com.chartboost.sdk"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../com/chartboost/sdk/ChartboostDelegate.html" title="class in com.chartboost.sdk"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../index.html?com/chartboost/sdk/ChartboostActivity.html" target="_top">Frames</a></li>
+<li><a href="ChartboostActivity.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#fields_inherited_from_class_android.app.Activity">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">com.chartboost.sdk</div>
+<h2 title="Class ChartboostActivity" class="title">Class ChartboostActivity</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li>java.lang.Object</li>
+<li>
+<ul class="inheritance">
+<li>android.content.Context</li>
+<li>
+<ul class="inheritance">
+<li>android.content.ContextWrapper</li>
+<li>
+<ul class="inheritance">
+<li>android.view.ContextThemeWrapper</li>
+<li>
+<ul class="inheritance">
+<li>android.app.Activity</li>
+<li>
+<ul class="inheritance">
+<li>com.chartboost.sdk.ChartboostActivity</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd>android.content.ComponentCallbacks, android.content.ComponentCallbacks2, android.view.KeyEvent.Callback, android.view.LayoutInflater.Factory, android.view.LayoutInflater.Factory2, android.view.View.OnCreateContextMenuListener, android.view.Window.Callback, com.chartboost.sdk.AbstractChartboostDelegate</dd>
+</dl>
+<hr>
+<br>
+<pre>public abstract class <span class="strong">ChartboostActivity</span>
+extends android.app.Activity
+implements com.chartboost.sdk.AbstractChartboostDelegate</pre>
+<div class="block">Use this class as a base class for any activities of yours in order to simplify Chartboost integration.
+ This class handles all of the necessary lifecycle method calls into Chartboost.
+ It uses itself as a delegate, implementing the <code>AbstractChartboostDelegate</code> interface, allowing you to only override the
+  methods that you specifically need finer control over.</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<ul class="blockList">
+<li class="blockList"><a name="fields_inherited_from_class_android.app.Activity">
+<!--   -->
+</a>
+<h3>Fields inherited from class&nbsp;android.app.Activity</h3>
+<code>DEFAULT_KEYS_DIALER, DEFAULT_KEYS_DISABLE, DEFAULT_KEYS_SEARCH_GLOBAL, DEFAULT_KEYS_SEARCH_LOCAL, DEFAULT_KEYS_SHORTCUT, RESULT_CANCELED, RESULT_FIRST_USER, RESULT_OK</code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="fields_inherited_from_class_android.content.Context">
+<!--   -->
+</a>
+<h3>Fields inherited from class&nbsp;android.content.Context</h3>
+<code>ACCESSIBILITY_SERVICE, ACCOUNT_SERVICE, ACTIVITY_SERVICE, ALARM_SERVICE, AUDIO_SERVICE, BIND_ABOVE_CLIENT, BIND_ADJUST_WITH_ACTIVITY, BIND_ALLOW_OOM_MANAGEMENT, BIND_AUTO_CREATE, BIND_DEBUG_UNBIND, BIND_IMPORTANT, BIND_NOT_FOREGROUND, BIND_WAIVE_PRIORITY, CLIPBOARD_SERVICE, CONNECTIVITY_SERVICE, CONTEXT_IGNORE_SECURITY, CONTEXT_INCLUDE_CODE, CONTEXT_RESTRICTED, DEVICE_POLICY_SERVICE, DOWNLOAD_SERVICE, DROPBOX_SERVICE, INPUT_METHOD_SERVICE, KEYGUARD_SERVICE, LAYOUT_INFLATER_SERVICE, LOCATION_SERVICE, MODE_APPEND, MODE_MULTI_PROCESS, MODE_PRIVATE, MODE_WORLD_READABLE, MODE_WORLD_WRITEABLE, NFC_SERVICE, NOTIFICATION_SERVICE, POWER_SERVICE, SEARCH_SERVICE, SENSOR_SERVICE, STORAGE_SERVICE, TELEPHONY_SERVICE, TEXT_SERVICES_MANAGER_SERVICE, UI_MODE_SERVICE, USB_SERVICE, VIBRATOR_SERVICE, WALLPAPER_SERVICE, WIFI_P2P_SERVICE, WIFI_SERVICE, WINDOW_SERVICE</code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="fields_inherited_from_class_android.content.ComponentCallbacks2">
+<!--   -->
+</a>
+<h3>Fields inherited from interface&nbsp;android.content.ComponentCallbacks2</h3>
+<code>TRIM_MEMORY_BACKGROUND, TRIM_MEMORY_COMPLETE, TRIM_MEMORY_MODERATE, TRIM_MEMORY_UI_HIDDEN</code></li>
+</ul>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../com/chartboost/sdk/ChartboostActivity.html#ChartboostActivity()">ChartboostActivity</a></strong>()</code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../com/chartboost/sdk/ChartboostActivity.html#didCacheInPlay(java.lang.String)">didCacheInPlay</a></strong>(java.lang.String&nbsp;location)</code>
+<div class="block">Called after an InPlay object has been loaded from the Chartboost API
+  servers and cached locally.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../com/chartboost/sdk/ChartboostActivity.html#didCacheInterstitial(java.lang.String)">didCacheInterstitial</a></strong>(java.lang.String&nbsp;location)</code>
+<div class="block">Called after an interstitial has been loaded from the Chartboost API
+ servers and cached locally.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../com/chartboost/sdk/ChartboostActivity.html#didCacheMoreApps(java.lang.String)">didCacheMoreApps</a></strong>(java.lang.String&nbsp;location)</code>
+<div class="block">Called after an "more applications" has been loaded from the Chartboost API
+  servers and cached locally.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../com/chartboost/sdk/ChartboostActivity.html#didCacheRewardedVideo(java.lang.String)">didCacheRewardedVideo</a></strong>(java.lang.String&nbsp;location)</code>
+<div class="block">Called after a rewarded video has been loaded from the Chartboost API
+  servers and cached locally.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../com/chartboost/sdk/ChartboostActivity.html#didClickInterstitial(java.lang.String)">didClickInterstitial</a></strong>(java.lang.String&nbsp;location)</code>
+<div class="block">Called after an interstitial has been clicked.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../com/chartboost/sdk/ChartboostActivity.html#didClickMoreApps(java.lang.String)">didClickMoreApps</a></strong>(java.lang.String&nbsp;location)</code>
+<div class="block">Called after an "more applications" has been clicked.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../com/chartboost/sdk/ChartboostActivity.html#didClickRewardedVideo(java.lang.String)">didClickRewardedVideo</a></strong>(java.lang.String&nbsp;location)</code>
+<div class="block">Called after a rewarded video has been clicked.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../com/chartboost/sdk/ChartboostActivity.html#didCloseInterstitial(java.lang.String)">didCloseInterstitial</a></strong>(java.lang.String&nbsp;location)</code>
+<div class="block">Called after an interstitial has been closed.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../com/chartboost/sdk/ChartboostActivity.html#didCloseMoreApps(java.lang.String)">didCloseMoreApps</a></strong>(java.lang.String&nbsp;location)</code>
+<div class="block">Called after an "more applications" has been closed.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../com/chartboost/sdk/ChartboostActivity.html#didCloseRewardedVideo(java.lang.String)">didCloseRewardedVideo</a></strong>(java.lang.String&nbsp;location)</code>
+<div class="block">Called after a rewarded video has been closed.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../com/chartboost/sdk/ChartboostActivity.html#didCompleteRewardedVideo(java.lang.String,%20int)">didCompleteRewardedVideo</a></strong>(java.lang.String&nbsp;location,
+                        int&nbsp;reward)</code>
+<div class="block">Called after a rewarded video has been viewed completely and user is eligible for reward.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../com/chartboost/sdk/ChartboostActivity.html#didDismissInterstitial(java.lang.String)">didDismissInterstitial</a></strong>(java.lang.String&nbsp;location)</code>
+<div class="block">Called after an interstitial has been dismissed.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../com/chartboost/sdk/ChartboostActivity.html#didDismissMoreApps(java.lang.String)">didDismissMoreApps</a></strong>(java.lang.String&nbsp;location)</code>
+<div class="block">Called after an "more applications" has been dismissed.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../com/chartboost/sdk/ChartboostActivity.html#didDismissRewardedVideo(java.lang.String)">didDismissRewardedVideo</a></strong>(java.lang.String&nbsp;location)</code>
+<div class="block">Called after a rewarded video has been dismissed.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../com/chartboost/sdk/ChartboostActivity.html#didDisplayInterstitial(java.lang.String)">didDisplayInterstitial</a></strong>(java.lang.String&nbsp;location)</code>
+<div class="block">Called after an interstitial has been displayed on the screen.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../com/chartboost/sdk/ChartboostActivity.html#didDisplayMoreApps(java.lang.String)">didDisplayMoreApps</a></strong>(java.lang.String&nbsp;location)</code>
+<div class="block">Called after an "more applications" has been displayed on the screen.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../com/chartboost/sdk/ChartboostActivity.html#didDisplayRewardedVideo(java.lang.String)">didDisplayRewardedVideo</a></strong>(java.lang.String&nbsp;location)</code>
+<div class="block">Called after a rewarded video has been displayed on the screen.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../com/chartboost/sdk/ChartboostActivity.html#didFailToLoadInPlay(java.lang.String,%20com.chartboost.sdk.Model.CBError.CBImpressionError)">didFailToLoadInPlay</a></strong>(java.lang.String&nbsp;location,
+                   <a href="../../../com/chartboost/sdk/Model/CBError.CBImpressionError.html" title="enum in com.chartboost.sdk.Model">CBError.CBImpressionError</a>&nbsp;error)</code>
+<div class="block">Called after a InPlay has attempted to load from the Chartboost API
+  servers but failed.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../com/chartboost/sdk/ChartboostActivity.html#didFailToLoadInterstitial(java.lang.String,%20com.chartboost.sdk.Model.CBError.CBImpressionError)">didFailToLoadInterstitial</a></strong>(java.lang.String&nbsp;location,
+                         <a href="../../../com/chartboost/sdk/Model/CBError.CBImpressionError.html" title="enum in com.chartboost.sdk.Model">CBError.CBImpressionError</a>&nbsp;error)</code>
+<div class="block">Called after an interstitial has attempted to load from the Chartboost API
+ servers but failed.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../com/chartboost/sdk/ChartboostActivity.html#didFailToLoadMoreApps(java.lang.String,%20com.chartboost.sdk.Model.CBError.CBImpressionError)">didFailToLoadMoreApps</a></strong>(java.lang.String&nbsp;location,
+                     <a href="../../../com/chartboost/sdk/Model/CBError.CBImpressionError.html" title="enum in com.chartboost.sdk.Model">CBError.CBImpressionError</a>&nbsp;error)</code>
+<div class="block">Called after an "more applications" has attempted to load from the Chartboost API
+ servers but failed.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../com/chartboost/sdk/ChartboostActivity.html#didFailToLoadRewardedVideo(java.lang.String,%20com.chartboost.sdk.Model.CBError.CBImpressionError)">didFailToLoadRewardedVideo</a></strong>(java.lang.String&nbsp;location,
+                          <a href="../../../com/chartboost/sdk/Model/CBError.CBImpressionError.html" title="enum in com.chartboost.sdk.Model">CBError.CBImpressionError</a>&nbsp;error)</code>
+<div class="block">Called after a rewarded video has attempted to load from the Chartboost API
+  servers but failed.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../com/chartboost/sdk/ChartboostActivity.html#didFailToRecordClick(java.lang.String,%20com.chartboost.sdk.Model.CBError.CBClickError)">didFailToRecordClick</a></strong>(java.lang.String&nbsp;uri,
+                    <a href="../../../com/chartboost/sdk/Model/CBError.CBClickError.html" title="enum in com.chartboost.sdk.Model">CBError.CBClickError</a>&nbsp;error)</code>
+<div class="block">Called after a click is registered, but the user is not fowrwarded to the Google Play Store.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../com/chartboost/sdk/ChartboostActivity.html#didPauseClickForConfirmation()">didPauseClickForConfirmation</a></strong>()</code>
+<div class="block">Called if Chartboost SDK pauses click actions awaiting confirmation from the user.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../com/chartboost/sdk/ChartboostActivity.html#onBackPressed()">onBackPressed</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../com/chartboost/sdk/ChartboostActivity.html#onCreate(android.os.Bundle)">onCreate</a></strong>(android.os.Bundle&nbsp;savedInstanceState)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../com/chartboost/sdk/ChartboostActivity.html#shouldDisplayInterstitial(java.lang.String)">shouldDisplayInterstitial</a></strong>(java.lang.String&nbsp;location)</code>
+<div class="block">Called before an interstitial will be displayed on the screen.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../com/chartboost/sdk/ChartboostActivity.html#shouldDisplayMoreApps(java.lang.String)">shouldDisplayMoreApps</a></strong>(java.lang.String&nbsp;location)</code>
+<div class="block">Called before an "more applications" will be displayed on the screen.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../com/chartboost/sdk/ChartboostActivity.html#shouldDisplayRewardedVideo(java.lang.String)">shouldDisplayRewardedVideo</a></strong>(java.lang.String&nbsp;location)</code>
+<div class="block">Called before a rewarded video will be displayed on the screen.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../com/chartboost/sdk/ChartboostActivity.html#shouldRequestInterstitial(java.lang.String)">shouldRequestInterstitial</a></strong>(java.lang.String&nbsp;location)</code>
+<div class="block">Called before requesting an interstitial via the Chartboost API server.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../com/chartboost/sdk/ChartboostActivity.html#shouldRequestMoreApps(java.lang.String)">shouldRequestMoreApps</a></strong>(java.lang.String&nbsp;location)</code>
+<div class="block">Called before requesting more apps from the back-end.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../com/chartboost/sdk/ChartboostActivity.html#willDisplayVideo(java.lang.String)">willDisplayVideo</a></strong>(java.lang.String&nbsp;location)</code>
+<div class="block">Called before the video is about to be displayed on the screen.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_android.app.Activity">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;android.app.Activity</h3>
+<code>addContentView, closeContextMenu, closeOptionsMenu, createPendingResult, dismissDialog, dispatchGenericMotionEvent, dispatchKeyEvent, dispatchKeyShortcutEvent, dispatchPopulateAccessibilityEvent, dispatchTouchEvent, dispatchTrackballEvent, dump, findViewById, finish, finishActivity, finishActivityFromChild, finishFromChild, getActionBar, getApplication, getCallingActivity, getCallingPackage, getChangingConfigurations, getComponentName, getCurrentFocus, getFragmentManager, getIntent, getLastNonConfigurationInstance, getLayoutInflater, getLoaderManager, getLocalClassName, getMenuInflater, getParent, getPreferences, getRequestedOrientation, getSystemService, getTaskId, getTitle, getTitleColor, getVolumeControlStream, getWindow, getWindowManager, hasWindowFocus, invalidateOptionsMenu, isChangingConfigurations, isChild, isFinishing, isTaskRoot, managedQuery, moveTaskToBack, onActionModeFinished, onActionModeStarted, onAttachedToWindow, onAttachFragment, onConfigurationChanged, onContentChanged, onContextItemSelected, onContextMenuClosed, onCreateContextMenu, onCreateDescription, onCreateOptionsMenu, onCreatePanelMenu, onCreatePanelView, onCreateThumbnail, onCreateView, onCreateView, onDetachedFromWindow, onGenericMotionEvent, onKeyDown, onKeyLongPress, onKeyMultiple, onKeyShortcut, onKeyUp, onLowMemory, onMenuItemSelected, onMenuOpened, onOptionsItemSelected, onOptionsMenuClosed, onPanelClosed, onPrepareOptionsMenu, onPreparePanel, onRetainNonConfigurationInstance, onSearchRequested, onTouchEvent, onTrackballEvent, onTrimMemory, onUserInteraction, onWindowAttributesChanged, onWindowFocusChanged, onWindowStartingActionMode, openContextMenu, openOptionsMenu, overridePendingTransition, recreate, registerForContextMenu, removeDialog, requestWindowFeature, runOnUiThread, setContentView, setContentView, setContentView, setDefaultKeyMode, setFeatureDrawable, setFeatureDrawableAlpha, setFeatureDrawableResource, setFeatureDrawableUri, setFinishOnTouchOutside, setIntent, setProgress, setProgressBarIndeterminate, setProgressBarIndeterminateVisibility, setProgressBarVisibility, setRequestedOrientation, setResult, setResult, setSecondaryProgress, setTitle, setTitle, setTitleColor, setVisible, setVolumeControlStream, showDialog, showDialog, startActionMode, startActivities, startActivity, startActivityForResult, startActivityFromChild, startActivityFromFragment, startActivityIfNeeded, startIntentSender, startIntentSenderForResult, startIntentSenderFromChild, startManagingCursor, startNextMatchingActivity, startSearch, stopManagingCursor, takeKeyEvents, triggerSearch, unregisterForContextMenu</code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_android.view.ContextThemeWrapper">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;android.view.ContextThemeWrapper</h3>
+<code>getTheme, setTheme</code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_android.content.ContextWrapper">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;android.content.ContextWrapper</h3>
+<code>bindService, checkCallingOrSelfPermission, checkCallingOrSelfUriPermission, checkCallingPermission, checkCallingUriPermission, checkPermission, checkUriPermission, checkUriPermission, clearWallpaper, createPackageContext, databaseList, deleteDatabase, deleteFile, enforceCallingOrSelfPermission, enforceCallingOrSelfUriPermission, enforceCallingPermission, enforceCallingUriPermission, enforcePermission, enforceUriPermission, enforceUriPermission, fileList, getApplicationContext, getApplicationInfo, getAssets, getBaseContext, getCacheDir, getClassLoader, getContentResolver, getDatabasePath, getDir, getExternalCacheDir, getExternalFilesDir, getFilesDir, getFileStreamPath, getMainLooper, getObbDir, getPackageCodePath, getPackageManager, getPackageName, getPackageResourcePath, getResources, getSharedPreferences, getWallpaper, getWallpaperDesiredMinimumHeight, getWallpaperDesiredMinimumWidth, grantUriPermission, isRestricted, openFileInput, openFileOutput, openOrCreateDatabase, openOrCreateDatabase, peekWallpaper, registerReceiver, registerReceiver, removeStickyBroadcast, revokeUriPermission, sendBroadcast, sendBroadcast, sendOrderedBroadcast, sendOrderedBroadcast, sendStickyBroadcast, sendStickyOrderedBroadcast, setWallpaper, setWallpaper, startInstrumentation, startService, stopService, unbindService, unregisterReceiver</code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_android.content.Context">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;android.content.Context</h3>
+<code>getString, getString, getText, obtainStyledAttributes, obtainStyledAttributes, obtainStyledAttributes, obtainStyledAttributes, registerComponentCallbacks, unregisterComponentCallbacks</code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="ChartboostActivity()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>ChartboostActivity</h4>
+<pre>public&nbsp;ChartboostActivity()</pre>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="onCreate(android.os.Bundle)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onCreate</h4>
+<pre>public&nbsp;void&nbsp;onCreate(android.os.Bundle&nbsp;savedInstanceState)</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>onCreate</code>&nbsp;in class&nbsp;<code>android.app.Activity</code></dd>
+</dl>
+</li>
+</ul>
+<a name="onBackPressed()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onBackPressed</h4>
+<pre>public&nbsp;void&nbsp;onBackPressed()</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>onBackPressed</code>&nbsp;in class&nbsp;<code>android.app.Activity</code></dd>
+</dl>
+</li>
+</ul>
+<a name="shouldRequestInterstitial(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>shouldRequestInterstitial</h4>
+<pre>public&nbsp;boolean&nbsp;shouldRequestInterstitial(java.lang.String&nbsp;location)</pre>
+<div class="block">Called before requesting an interstitial via the Chartboost API server.
+ <p>
+ Implement to control if the Charboost SDK should fetch data from
+ the Chartboost API servers for the given <a href="../../../com/chartboost/sdk/CBLocation.html" title="interface in com.chartboost.sdk"><code>CBLocation</code></a>}.  This is evaluated
+ if the <a href="../../../com/chartboost/sdk/Chartboost.html#showInterstitial(java.lang.String)"><code>Chartboost.showInterstitial(String)</code></a>} or<a href="../../../com/chartboost/sdk/Chartboost.html#cacheInterstitial(java.lang.String)"><code>Chartboost.cacheInterstitial(String)</code></a>}
+ are called.  If true is returned the operation will proceed, if false, then theoperation is treated as a no-op.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>shouldRequestInterstitial</code>&nbsp;in interface&nbsp;<code>com.chartboost.sdk.AbstractChartboostDelegate</code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>location</code> - The location for the Chartboost impression type.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if execution should proceed, false if not. Default return is YES.</dd></dl>
+</li>
+</ul>
+<a name="shouldDisplayInterstitial(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>shouldDisplayInterstitial</h4>
+<pre>public&nbsp;boolean&nbsp;shouldDisplayInterstitial(java.lang.String&nbsp;location)</pre>
+<div class="block">Called before an interstitial will be displayed on the screen.
+ <p>
+ Implement to control if the Charboost SDK should display an interstitialfor the given <a href="../../../com/chartboost/sdk/CBLocation.html" title="interface in com.chartboost.sdk"><code>CBLocation</code></a>}.  This is evaluated if the <a href="../../../com/chartboost/sdk/Chartboost.html#showInterstitial(java.lang.String)"><code>Chartboost.showInterstitial(String)</code></a>}
+ is called.  If true is returned the operation will proceed, if false, then the
+ operation is treated as a no-op and nothing is displayed.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>shouldDisplayInterstitial</code>&nbsp;in interface&nbsp;<code>com.chartboost.sdk.AbstractChartboostDelegate</code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>location</code> - The location for the Chartboost impression type.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if execution should proceed, false if not. Default return is true.</dd></dl>
+</li>
+</ul>
+<a name="didCacheInterstitial(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>didCacheInterstitial</h4>
+<pre>public&nbsp;void&nbsp;didCacheInterstitial(java.lang.String&nbsp;location)</pre>
+<div class="block">Called after an interstitial has been loaded from the Chartboost API
+ servers and cached locally.
+ <p>
+ Implement to be notified of when an interstitial has been loaded from the Chartboost API
+ servers and cached locally for a given <a href="../../../com/chartboost/sdk/CBLocation.html" title="interface in com.chartboost.sdk"><code>CBLocation</code></a>}.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>didCacheInterstitial</code>&nbsp;in interface&nbsp;<code>com.chartboost.sdk.AbstractChartboostDelegate</code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>location</code> - The location for the Chartboost impression type.</dd></dl>
+</li>
+</ul>
+<a name="didFailToLoadInterstitial(java.lang.String, com.chartboost.sdk.Model.CBError.CBImpressionError)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>didFailToLoadInterstitial</h4>
+<pre>public&nbsp;void&nbsp;didFailToLoadInterstitial(java.lang.String&nbsp;location,
+                             <a href="../../../com/chartboost/sdk/Model/CBError.CBImpressionError.html" title="enum in com.chartboost.sdk.Model">CBError.CBImpressionError</a>&nbsp;error)</pre>
+<div class="block">Called after an interstitial has attempted to load from the Chartboost API
+ servers but failed.
+ <p>
+ Implement to be notified of when an interstitial has attempted to load from the Chartboost API
+ servers but failed for a given <a href="../../../com/chartboost/sdk/CBLocation.html" title="interface in com.chartboost.sdk"><code>CBLocation</code></a>}.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>didFailToLoadInterstitial</code>&nbsp;in interface&nbsp;<code>com.chartboost.sdk.AbstractChartboostDelegate</code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>location</code> - The location for the Chartboost impression type.</dd><dd><code>error</code> - The reason for the error defined via a <a href="../../../com/chartboost/sdk/Model/CBError.CBImpressionError.html" title="enum in com.chartboost.sdk.Model"><code>CBError.CBImpressionError</code></a>.</dd></dl>
+</li>
+</ul>
+<a name="didDismissInterstitial(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>didDismissInterstitial</h4>
+<pre>public&nbsp;void&nbsp;didDismissInterstitial(java.lang.String&nbsp;location)</pre>
+<div class="block">Called after an interstitial has been dismissed. 
+ <p>
+ Implement to be notified of when an interstitial has been dismissed for a given <a href="../../../com/chartboost/sdk/CBLocation.html" title="interface in com.chartboost.sdk"><code>CBLocation</code></a>}.
+ "Dismissal" is defined as any action that removed the interstitial UI such as a click or close.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>didDismissInterstitial</code>&nbsp;in interface&nbsp;<code>com.chartboost.sdk.AbstractChartboostDelegate</code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>location</code> - The location for the Chartboost impression type.</dd></dl>
+</li>
+</ul>
+<a name="didCloseInterstitial(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>didCloseInterstitial</h4>
+<pre>public&nbsp;void&nbsp;didCloseInterstitial(java.lang.String&nbsp;location)</pre>
+<div class="block">Called after an interstitial has been closed.
+ <p>
+ Implement to be notified of when an interstitial has been closed for a given <a href="../../../com/chartboost/sdk/CBLocation.html" title="interface in com.chartboost.sdk"><code>CBLocation</code></a>}.
+ "Closed" is defined as clicking the close interface for the interstitial.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>didCloseInterstitial</code>&nbsp;in interface&nbsp;<code>com.chartboost.sdk.AbstractChartboostDelegate</code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>location</code> - The location for the Chartboost impression type.</dd></dl>
+</li>
+</ul>
+<a name="didClickInterstitial(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>didClickInterstitial</h4>
+<pre>public&nbsp;void&nbsp;didClickInterstitial(java.lang.String&nbsp;location)</pre>
+<div class="block">Called after an interstitial has been clicked.
+ <p>
+ Implement to be notified of when an interstitial has been click for a given <a href="../../../com/chartboost/sdk/CBLocation.html" title="interface in com.chartboost.sdk"><code>CBLocation</code></a>}.
+ "Clicked" is defined as clicking the creative interface for the interstitial.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>didClickInterstitial</code>&nbsp;in interface&nbsp;<code>com.chartboost.sdk.AbstractChartboostDelegate</code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>location</code> - The location for the Chartboost impression type.</dd></dl>
+</li>
+</ul>
+<a name="didDisplayInterstitial(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>didDisplayInterstitial</h4>
+<pre>public&nbsp;void&nbsp;didDisplayInterstitial(java.lang.String&nbsp;location)</pre>
+<div class="block">Called after an interstitial has been displayed on the screen.
+ <p>
+ Implement to be notified of when an interstitial has
+ been displayed on the screen for a given <a href="../../../com/chartboost/sdk/CBLocation.html" title="interface in com.chartboost.sdk"><code>CBLocation</code></a>}.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>didDisplayInterstitial</code>&nbsp;in interface&nbsp;<code>com.chartboost.sdk.AbstractChartboostDelegate</code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>location</code> - The location for the Chartboost impression type.</dd></dl>
+</li>
+</ul>
+<a name="shouldRequestMoreApps(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>shouldRequestMoreApps</h4>
+<pre>public&nbsp;boolean&nbsp;shouldRequestMoreApps(java.lang.String&nbsp;location)</pre>
+<div class="block">Called before requesting more apps from the back-end.
+ Only useful to prevent an ad from being implicitly displayed on fast app switching.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>shouldRequestMoreApps</code>&nbsp;in interface&nbsp;<code>com.chartboost.sdk.AbstractChartboostDelegate</code></dd>
+<dt><span class="strong">Returns:</span></dt><dd>whether to request an interstitial</dd></dl>
+</li>
+</ul>
+<a name="shouldDisplayMoreApps(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>shouldDisplayMoreApps</h4>
+<pre>public&nbsp;boolean&nbsp;shouldDisplayMoreApps(java.lang.String&nbsp;location)</pre>
+<div class="block">Called before an "more applications" will be displayed on the screen.
+ <p> 
+ Implement to control if the Charboost SDK should display an "more applications"
+ for the given <a href="../../../com/chartboost/sdk/CBLocation.html" title="interface in com.chartboost.sdk"><code>CBLocation</code></a>.  This is evaluated if the <a href="../../../com/chartboost/sdk/Chartboost.html#showMoreApps(java.lang.String)"><code>Chartboost.showMoreApps(String)</code></a>
+ is called.  If true is returned the operation will proceed, if false, then the
+ operation is treated as a no-op and nothing is displayed.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>shouldDisplayMoreApps</code>&nbsp;in interface&nbsp;<code>com.chartboost.sdk.AbstractChartboostDelegate</code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>location</code> - The location for the Chartboost impression type.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if execution should proceed, false if not. Default return is true.</dd></dl>
+</li>
+</ul>
+<a name="didFailToLoadMoreApps(java.lang.String, com.chartboost.sdk.Model.CBError.CBImpressionError)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>didFailToLoadMoreApps</h4>
+<pre>public&nbsp;void&nbsp;didFailToLoadMoreApps(java.lang.String&nbsp;location,
+                         <a href="../../../com/chartboost/sdk/Model/CBError.CBImpressionError.html" title="enum in com.chartboost.sdk.Model">CBError.CBImpressionError</a>&nbsp;error)</pre>
+<div class="block">Called after an "more applications" has attempted to load from the Chartboost API
+ servers but failed.
+ <p>
+ Implement to be notified of when an "more applications" has attempted to load from the Chartboost API
+ servers but failed for a given <a href="../../../com/chartboost/sdk/CBLocation.html" title="interface in com.chartboost.sdk"><code>CBLocation</code></a>.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>didFailToLoadMoreApps</code>&nbsp;in interface&nbsp;<code>com.chartboost.sdk.AbstractChartboostDelegate</code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>location</code> - The location for the Chartboost impression type.</dd><dd><code>error</code> - The reason for the error defined via a <a href="../../../com/chartboost/sdk/Model/CBError.CBImpressionError.html" title="enum in com.chartboost.sdk.Model"><code>CBError.CBImpressionError</code></a>}.</dd></dl>
+</li>
+</ul>
+<a name="didCacheMoreApps(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>didCacheMoreApps</h4>
+<pre>public&nbsp;void&nbsp;didCacheMoreApps(java.lang.String&nbsp;location)</pre>
+<div class="block">Called after an "more applications" has been loaded from the Chartboost API
+  servers and cached locally.
+  <p>
+  Implement to be notified of when an "more applications" has been loaded from the Chartboost API
+  servers and cached locally for a given <a href="../../../com/chartboost/sdk/CBLocation.html" title="interface in com.chartboost.sdk"><code>CBLocation</code></a>}.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>didCacheMoreApps</code>&nbsp;in interface&nbsp;<code>com.chartboost.sdk.AbstractChartboostDelegate</code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>location</code> - The location for the Chartboost impression type.</dd></dl>
+</li>
+</ul>
+<a name="didDismissMoreApps(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>didDismissMoreApps</h4>
+<pre>public&nbsp;void&nbsp;didDismissMoreApps(java.lang.String&nbsp;location)</pre>
+<div class="block">Called after an "more applications" has been dismissed.
+ <p>
+ Implement to be notified of when an "more applications" has been dismissed for a given <a href="../../../com/chartboost/sdk/CBLocation.html" title="interface in com.chartboost.sdk"><code>CBLocation</code></a>}.
+ "Dismissal" is defined as any action that removed the "more applications" UI such as a click or close.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>didDismissMoreApps</code>&nbsp;in interface&nbsp;<code>com.chartboost.sdk.AbstractChartboostDelegate</code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>location</code> - The location for the Chartboost impression type.</dd></dl>
+</li>
+</ul>
+<a name="didCloseMoreApps(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>didCloseMoreApps</h4>
+<pre>public&nbsp;void&nbsp;didCloseMoreApps(java.lang.String&nbsp;location)</pre>
+<div class="block">Called after an "more applications" has been closed. 
+  <p>
+  Implement to be notified of when an "more applications" has been closed for a given <a href="../../../com/chartboost/sdk/CBLocation.html" title="interface in com.chartboost.sdk"><code>CBLocation</code></a>.
+  "Closed" is defined as clicking the close interface for the "more applications".</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>didCloseMoreApps</code>&nbsp;in interface&nbsp;<code>com.chartboost.sdk.AbstractChartboostDelegate</code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>location</code> - The location for the Chartboost impression type.</dd></dl>
+</li>
+</ul>
+<a name="didClickMoreApps(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>didClickMoreApps</h4>
+<pre>public&nbsp;void&nbsp;didClickMoreApps(java.lang.String&nbsp;location)</pre>
+<div class="block">Called after an "more applications" has been clicked.
+  <p>
+  Implement to be notified of when an "more applications" has been click for a given <a href="../../../com/chartboost/sdk/CBLocation.html" title="interface in com.chartboost.sdk"><code>CBLocation</code></a>.
+  "Clicked" is defined as clicking the creative interface for the "more applications".</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>didClickMoreApps</code>&nbsp;in interface&nbsp;<code>com.chartboost.sdk.AbstractChartboostDelegate</code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>location</code> - The location for the Chartboost impression type.</dd></dl>
+</li>
+</ul>
+<a name="didDisplayMoreApps(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>didDisplayMoreApps</h4>
+<pre>public&nbsp;void&nbsp;didDisplayMoreApps(java.lang.String&nbsp;location)</pre>
+<div class="block">Called after an "more applications" has been displayed on the screen.
+  <p>
+  Implement to be notified of when an "more applications" has
+  been displayed on the screen for a given <a href="../../../com/chartboost/sdk/CBLocation.html" title="interface in com.chartboost.sdk"><code>CBLocation</code></a>}.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>didDisplayMoreApps</code>&nbsp;in interface&nbsp;<code>com.chartboost.sdk.AbstractChartboostDelegate</code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>location</code> - The location for the Chartboost impression type.</dd></dl>
+</li>
+</ul>
+<a name="didFailToRecordClick(java.lang.String, com.chartboost.sdk.Model.CBError.CBClickError)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>didFailToRecordClick</h4>
+<pre>public&nbsp;void&nbsp;didFailToRecordClick(java.lang.String&nbsp;uri,
+                        <a href="../../../com/chartboost/sdk/Model/CBError.CBClickError.html" title="enum in com.chartboost.sdk.Model">CBError.CBClickError</a>&nbsp;error)</pre>
+<div class="block">Called after a click is registered, but the user is not fowrwarded to the Google Play Store. 
+ <p>
+ Implement to be notified of when a click is registered, but the user is not fowrwarded 
+ to the Google Play Store for a given <a href="../../../com/chartboost/sdk/CBLocation.html" title="interface in com.chartboost.sdk"><code>CBLocation</code></a>}.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>didFailToRecordClick</code>&nbsp;in interface&nbsp;<code>com.chartboost.sdk.AbstractChartboostDelegate</code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>uri</code> - The location for the Chartboost impression type.</dd><dd><code>error</code> - The reason for the error defined via a <a href="../../../com/chartboost/sdk/Model/CBError.CBClickError.html" title="enum in com.chartboost.sdk.Model"><code>CBError.CBClickError</code></a>}.</dd></dl>
+</li>
+</ul>
+<a name="didPauseClickForConfirmation()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>didPauseClickForConfirmation</h4>
+<pre>public&nbsp;void&nbsp;didPauseClickForConfirmation()</pre>
+<div class="block">Called if Chartboost SDK pauses click actions awaiting confirmation from the user.
+ <p>
+ Use this method to display any gating you would like to prompt the user for input.
+ Once confirmed call <a href="../../../com/chartboost/sdk/Chartboost.html#didPassAgeGate(boolean)"><code>Chartboost.didPassAgeGate(boolean)</code></a>to continue execution.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>didPauseClickForConfirmation</code>&nbsp;in interface&nbsp;<code>com.chartboost.sdk.AbstractChartboostDelegate</code></dd>
+</dl>
+</li>
+</ul>
+<a name="shouldDisplayRewardedVideo(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>shouldDisplayRewardedVideo</h4>
+<pre>public&nbsp;boolean&nbsp;shouldDisplayRewardedVideo(java.lang.String&nbsp;location)</pre>
+<div class="block">Called before a rewarded video will be displayed on the screen.
+  <p>
+  Implement to control if the Charboost SDK should display a rewarded video
+  for the given <a href="../../../com/chartboost/sdk/CBLocation.html" title="interface in com.chartboost.sdk"><code>CBLocation</code></a>.  This is evaluated if the <a href="../../../com/chartboost/sdk/Chartboost.html#showRewardedVideo(java.lang.String)"><code>Chartboost.showRewardedVideo(String)</code></a>
+  is called.  If true is returned the operation will proceed, if false, then the
+  operation is treated as a no-op and nothing is displayed.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>shouldDisplayRewardedVideo</code>&nbsp;in interface&nbsp;<code>com.chartboost.sdk.AbstractChartboostDelegate</code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>location</code> - The location for the Chartboost impression type.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if execution should proceed, false if not. Default return is true.</dd></dl>
+</li>
+</ul>
+<a name="didCacheRewardedVideo(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>didCacheRewardedVideo</h4>
+<pre>public&nbsp;void&nbsp;didCacheRewardedVideo(java.lang.String&nbsp;location)</pre>
+<div class="block">Called after a rewarded video has been loaded from the Chartboost API
+  servers and cached locally.
+  <p>
+  Implement to be notified of when a rewarded video has been loaded from the Chartboost API
+  servers and cached locally for a given <a href="../../../com/chartboost/sdk/CBLocation.html" title="interface in com.chartboost.sdk"><code>CBLocation</code></a>.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>didCacheRewardedVideo</code>&nbsp;in interface&nbsp;<code>com.chartboost.sdk.AbstractChartboostDelegate</code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>location</code> - The location for the Chartboost impression type.</dd></dl>
+</li>
+</ul>
+<a name="didFailToLoadRewardedVideo(java.lang.String, com.chartboost.sdk.Model.CBError.CBImpressionError)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>didFailToLoadRewardedVideo</h4>
+<pre>public&nbsp;void&nbsp;didFailToLoadRewardedVideo(java.lang.String&nbsp;location,
+                              <a href="../../../com/chartboost/sdk/Model/CBError.CBImpressionError.html" title="enum in com.chartboost.sdk.Model">CBError.CBImpressionError</a>&nbsp;error)</pre>
+<div class="block">Called after a rewarded video has attempted to load from the Chartboost API
+  servers but failed.
+  <p>
+  Implement to be notified of when an rewarded video has attempted to load from the Chartboost API
+  servers but failed for a given <a href="../../../com/chartboost/sdk/CBLocation.html" title="interface in com.chartboost.sdk"><code>CBLocation</code></a>}.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>didFailToLoadRewardedVideo</code>&nbsp;in interface&nbsp;<code>com.chartboost.sdk.AbstractChartboostDelegate</code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>location</code> - The location for the Chartboost impression type.</dd><dd><code>error</code> - The reason for the error defined via a <a href="../../../com/chartboost/sdk/Model/CBError.CBImpressionError.html" title="enum in com.chartboost.sdk.Model"><code>CBError.CBImpressionError</code></a>}.</dd></dl>
+</li>
+</ul>
+<a name="didDismissRewardedVideo(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>didDismissRewardedVideo</h4>
+<pre>public&nbsp;void&nbsp;didDismissRewardedVideo(java.lang.String&nbsp;location)</pre>
+<div class="block">Called after a rewarded video has been dismissed. 
+ <p>
+ Implement to be notified of when a rewarded video has been dismissed for a given <a href="../../../com/chartboost/sdk/CBLocation.html" title="interface in com.chartboost.sdk"><code>CBLocation</code></a>}.
+ "Dismissal" is defined as any action that removed the rewarded video UI such as a click or close.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>didDismissRewardedVideo</code>&nbsp;in interface&nbsp;<code>com.chartboost.sdk.AbstractChartboostDelegate</code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>location</code> - The location for the Chartboost impression type.</dd></dl>
+</li>
+</ul>
+<a name="didCloseRewardedVideo(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>didCloseRewardedVideo</h4>
+<pre>public&nbsp;void&nbsp;didCloseRewardedVideo(java.lang.String&nbsp;location)</pre>
+<div class="block">Called after a rewarded video has been closed.
+  <p>
+  Implement to be notified of when a rewarded video has been closed for a given <a href="../../../com/chartboost/sdk/CBLocation.html" title="interface in com.chartboost.sdk"><code>CBLocation</code></a>.
+  "Closed" is defined as clicking the close interface for the rewarded video.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>didCloseRewardedVideo</code>&nbsp;in interface&nbsp;<code>com.chartboost.sdk.AbstractChartboostDelegate</code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>location</code> - The location for the Chartboost impression type.</dd></dl>
+</li>
+</ul>
+<a name="didClickRewardedVideo(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>didClickRewardedVideo</h4>
+<pre>public&nbsp;void&nbsp;didClickRewardedVideo(java.lang.String&nbsp;location)</pre>
+<div class="block">Called after a rewarded video has been clicked.
+  <p>
+  Implement to be notified of when a rewarded video has been click for a given <a href="../../../com/chartboost/sdk/CBLocation.html" title="interface in com.chartboost.sdk"><code>CBLocation</code></a>.
+  "Clicked" is defined as clicking the creative interface for the rewarded video.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>didClickRewardedVideo</code>&nbsp;in interface&nbsp;<code>com.chartboost.sdk.AbstractChartboostDelegate</code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>location</code> - The location for the Chartboost impression type.</dd></dl>
+</li>
+</ul>
+<a name="didCompleteRewardedVideo(java.lang.String, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>didCompleteRewardedVideo</h4>
+<pre>public&nbsp;void&nbsp;didCompleteRewardedVideo(java.lang.String&nbsp;location,
+                            int&nbsp;reward)</pre>
+<div class="block">Called after a rewarded video has been viewed completely and user is eligible for reward.
+ <p>
+ Implement to be notified of when a rewarded video has been viewed completely and user is eligible for reward.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>didCompleteRewardedVideo</code>&nbsp;in interface&nbsp;<code>com.chartboost.sdk.AbstractChartboostDelegate</code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>location</code> - The location for the Chartboost impression type.</dd><dd><code>reward</code> - The reward for watching the video.</dd></dl>
+</li>
+</ul>
+<a name="didDisplayRewardedVideo(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>didDisplayRewardedVideo</h4>
+<pre>public&nbsp;void&nbsp;didDisplayRewardedVideo(java.lang.String&nbsp;location)</pre>
+<div class="block">Called after a rewarded video has been displayed on the screen.
+  <p>
+  Implement to be notified of when a rewarded video has
+  been displayed on the screen for a given <a href="../../../com/chartboost/sdk/CBLocation.html" title="interface in com.chartboost.sdk"><code>CBLocation</code></a>.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>didDisplayRewardedVideo</code>&nbsp;in interface&nbsp;<code>com.chartboost.sdk.AbstractChartboostDelegate</code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>location</code> - The location for the Chartboost impression type.</dd></dl>
+</li>
+</ul>
+<a name="willDisplayVideo(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>willDisplayVideo</h4>
+<pre>public&nbsp;void&nbsp;willDisplayVideo(java.lang.String&nbsp;location)</pre>
+<div class="block">Called before the video is about to be displayed on the screen.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>willDisplayVideo</code>&nbsp;in interface&nbsp;<code>com.chartboost.sdk.AbstractChartboostDelegate</code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>location</code> - The location for the Chartboost impression type.</dd></dl>
+</li>
+</ul>
+<a name="didCacheInPlay(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>didCacheInPlay</h4>
+<pre>public&nbsp;void&nbsp;didCacheInPlay(java.lang.String&nbsp;location)</pre>
+<div class="block">Called after an InPlay object has been loaded from the Chartboost API
+  servers and cached locally.
+  <p>
+  Implement to be notified of when an InPlay object has been loaded from the Chartboost API
+  servers and cached locally for a given <a href="../../../com/chartboost/sdk/CBLocation.html" title="interface in com.chartboost.sdk"><code>CBLocation</code></a>}.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>didCacheInPlay</code>&nbsp;in interface&nbsp;<code>com.chartboost.sdk.AbstractChartboostDelegate</code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>location</code> - The location for the Chartboost impression type.</dd></dl>
+</li>
+</ul>
+<a name="didFailToLoadInPlay(java.lang.String, com.chartboost.sdk.Model.CBError.CBImpressionError)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>didFailToLoadInPlay</h4>
+<pre>public&nbsp;void&nbsp;didFailToLoadInPlay(java.lang.String&nbsp;location,
+                       <a href="../../../com/chartboost/sdk/Model/CBError.CBImpressionError.html" title="enum in com.chartboost.sdk.Model">CBError.CBImpressionError</a>&nbsp;error)</pre>
+<div class="block">Called after a InPlay has attempted to load from the Chartboost API
+  servers but failed.
+  <p>
+  Implement to be notified of when an InPlay has attempted to load from the Chartboost API
+  servers but failed for a given <a href="../../../com/chartboost/sdk/CBLocation.html" title="interface in com.chartboost.sdk"><code>CBLocation</code></a>}.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>didFailToLoadInPlay</code>&nbsp;in interface&nbsp;<code>com.chartboost.sdk.AbstractChartboostDelegate</code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>location</code> - The location for the Chartboost impression type.</dd><dd><code>error</code> - The reason for the error defined via a <a href="../../../com/chartboost/sdk/Model/CBError.CBImpressionError.html" title="enum in com.chartboost.sdk.Model"><code>CBError.CBImpressionError</code></a>}.</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../com/chartboost/sdk/Chartboost.CBFramework.html" title="enum in com.chartboost.sdk"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../com/chartboost/sdk/ChartboostDelegate.html" title="class in com.chartboost.sdk"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../index.html?com/chartboost/sdk/ChartboostActivity.html" target="_top">Frames</a></li>
+<li><a href="ChartboostActivity.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#fields_inherited_from_class_android.app.Activity">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</body>
+</html>

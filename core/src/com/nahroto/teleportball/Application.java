@@ -11,6 +11,7 @@ import com.badlogic.gdx.utils.viewport.Viewport;
 import com.nahroto.teleportball.screens.LoadingScreen;
 
 
+
 public class Application extends Game
 {
 	public SpriteBatch batch;
@@ -18,7 +19,17 @@ public class Application extends Game
 	public AssetManager assets;
     public Viewport viewport;
 	public Preferences prefs;
-	
+
+	public AdsController adsController;
+
+	public Application(AdsController adsController)
+	{
+		if (adsController != null)
+			this.adsController = adsController;
+		else
+			this.adsController = new DummyAdsController();
+	}
+
 	@Override
 	public void create()
     {
@@ -32,10 +43,28 @@ public class Application extends Game
 		setScreen(new LoadingScreen(this));
 	}
 
+
 	@Override
 	public void dispose()
 	{
 		batch.dispose();
 		assets.dispose();
+	}
+
+	public void showAd()
+	{
+		if (adsController.isWifiConnected())
+		{
+			adsController.showInterstitialAd(new Runnable()
+			{
+				@Override
+				public void run()
+				{
+					System.out.println("Interstitial app closed");
+				}
+			});
+		}
+		else
+			System.out.println("Interstitial ad not (yet) loaded");
 	}
 }

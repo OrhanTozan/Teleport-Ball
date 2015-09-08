@@ -37,7 +37,6 @@ public class Ball extends Entity
     {
         updateVelocity();
         updateMaxVelocity();
-        System.out.println((int)velocity.y);
         applyVelocityToPosition(delta);
         bounds.setPosition(position);
         handleCollision(player);

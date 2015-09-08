@@ -86,7 +86,10 @@ public class GameScreen implements Screen
         }
         app.batch.end();
         if (ball.died())
+        {
             restartHud.render();
+            // app.showAd();
+        }
     }
 
     @Override
@@ -98,7 +101,8 @@ public class GameScreen implements Screen
     @Override
     public void pause()
     {
-        Gdx.app.exit();
+        if (!ball.died())
+            Gdx.app.exit();
     }
 
     @Override
