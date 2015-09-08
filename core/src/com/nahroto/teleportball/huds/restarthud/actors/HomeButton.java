@@ -10,6 +10,7 @@ import com.badlogic.gdx.scenes.scene2d.utils.SpriteDrawable;
 import com.nahroto.teleportball.Application;
 import com.nahroto.teleportball.entities.Ball;
 import com.nahroto.teleportball.huds.ImageButtonGroup;
+import com.nahroto.teleportball.screens.GameScreen;
 import com.nahroto.teleportball.screens.MenuScreen;
 
 public class HomeButton extends ImageButtonGroup
@@ -29,6 +30,7 @@ public class HomeButton extends ImageButtonGroup
             public void clicked(InputEvent event, float x, float y)
             {
                 Ball.died = false;
+                GameScreen.adAlreadyShowed++;
                 app.setScreen(new MenuScreen(app));
             }
         });

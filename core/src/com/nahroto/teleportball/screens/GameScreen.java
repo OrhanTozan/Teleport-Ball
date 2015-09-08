@@ -27,6 +27,8 @@ public class GameScreen implements Screen
     private Font font;
     private RestartHud restartHud;
 
+    public static byte adAlreadyShowed = 2;
+
     public GameScreen(final Application app, final TextureAtlas atlas)
     {
         this.app = app;
@@ -88,8 +90,14 @@ public class GameScreen implements Screen
         if (ball.died())
         {
             restartHud.render();
-            // app.showAd();
+            if (adAlreadyShowed == 0)
+            {
+                app.showAd();
+                adAlreadyShowed++;
+            }
         }
+        if (adAlreadyShowed > 2)
+            adAlreadyShowed = 0;
     }
 
     @Override

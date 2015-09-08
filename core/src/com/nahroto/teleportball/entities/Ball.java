@@ -26,8 +26,8 @@ public class Ball extends Entity
     public Ball(Sprite sprite, final Application app)
     {
         super(sprite, app);
-        velocity.set(MathUtils.random(-500, 500), 500);
-        baseVelocity.set(500, 500);
+        velocity.set(MathUtils.random(-500, 500), 600);
+        baseVelocity.set(500, 600);
         position.set(Constants.V_WIDTH / 2 - sprite.getWidth() / 2, Constants.V_HEIGHT / 2 - sprite.getHeight() / 2);
         sprite.getTexture().setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
         bounds.set(position.x, position.y, sprite.getWidth(), sprite.getHeight());
@@ -37,6 +37,7 @@ public class Ball extends Entity
     {
         updateVelocity();
         updateMaxVelocity();
+        System.out.println((int)velocity.y);
         applyVelocityToPosition(delta);
         bounds.setPosition(position);
         handleCollision(player);
@@ -144,8 +145,8 @@ public class Ball extends Entity
     public void reset()
     {
         position.set(Constants.V_WIDTH / 2 - sprite.getWidth() / 2, Constants.V_HEIGHT / 2 - sprite.getHeight() / 2);
-        baseVelocity.set(500, 500);
-        velocity.set(MathUtils.random(-500, 500), 500);
+        baseVelocity.set(500, 600);
+        velocity.set(MathUtils.random(-500, 500), 600);
         Score.value = 0;
     }
 

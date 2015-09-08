@@ -10,6 +10,7 @@ import com.badlogic.gdx.scenes.scene2d.utils.SpriteDrawable;
 import com.nahroto.teleportball.entities.Ball;
 import com.nahroto.teleportball.entities.Player;
 import com.nahroto.teleportball.huds.ImageButtonGroup;
+import com.nahroto.teleportball.screens.GameScreen;
 
 public class RestartButton extends ImageButtonGroup
 {
@@ -27,6 +28,7 @@ public class RestartButton extends ImageButtonGroup
             public void clicked(InputEvent event, float x, float y)
             {
                 Ball.died = false;
+                GameScreen.adAlreadyShowed++;
                 ball.reset();
                 player.reset();
             }
