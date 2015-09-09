@@ -60,6 +60,7 @@ public class LoadingScreen implements Screen
         app.assets.load("sounds/a1.mp3", Sound.class);
         app.assets.load("sounds/a2.mp3", Sound.class);
         app.assets.load("sounds/rip.wav", Sound.class);
+        app.assets.finishLoading();
     }
 
     @Override

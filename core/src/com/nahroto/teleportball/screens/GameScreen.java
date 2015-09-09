@@ -27,12 +27,16 @@ public class GameScreen implements Screen
     private Font font;
     private RestartHud restartHud;
 
+    private Sprite paddleSprite, ballSprite;
+
     public static byte adAlreadyShowed = 2;
 
     public GameScreen(final Application app, final TextureAtlas atlas)
     {
         this.app = app;
         this.atlas = atlas;
+        paddleSprite = atlas.createSprite("paddle");
+        ballSprite = atlas.createSprite("ball");
     }
 
     @Override
@@ -46,8 +50,8 @@ public class GameScreen implements Screen
 
     private void initEntities()
     {
-        player = new Player(atlas.createSprite("paddle"), app); // init player with paddle texture
-        ball = new Ball(atlas.createSprite("ball"), app); // init ball with ball texture
+        player = new Player(paddleSprite, app); // init player with paddle texture
+        ball = new Ball(ballSprite, app); // init ball with ball texture
 
         String path = app.prefs.getString("BG_PATH", "images/paddlandball/bg-red.png");
         bg = new Sprite(app.assets.get(path, Texture.class));

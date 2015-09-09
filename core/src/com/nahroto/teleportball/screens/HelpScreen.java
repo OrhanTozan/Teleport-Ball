@@ -37,6 +37,7 @@ public class HelpScreen implements Screen
     public void show()
     {
         app.camera.setToOrtho(false, Constants.V_WIDTH, Constants.V_HEIGHT);
+        app.camera.update();
         player = new Player(atlas.createSprite("paddle"), app);
         String path = app.prefs.getString("BG_PATH", "images/paddlandball/bg-red.png");
         bg = new Sprite(app.assets.get(path, Texture.class));
