@@ -37,7 +37,6 @@ public class Ball extends Entity
     {
         updateVelocity();
         updateMaxVelocity();
-        System.out.println((int)velocity.y);
         applyVelocityToPosition(delta);
         bounds.setPosition(position);
         handleCollision(player);
@@ -46,12 +45,9 @@ public class Ball extends Entity
     private void updateVelocity()
     {
         if (velocity.y > 0) // if velocity.y is positive
-        {
             velocity.y = baseVelocity.y + (Score.value * SCORE_MULTIPLIER);
-        } else if (velocity.y < 0) // else if velocity.y is negative
-        {
+         else if (velocity.y < 0) // else if velocity.y is negative
             velocity.y = -baseVelocity.y - (Score.value * SCORE_MULTIPLIER);
-        }
     }
 
     private void updateMaxVelocity()
